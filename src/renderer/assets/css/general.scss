@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("./assets/fonts/GT-Walsheim-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("./assets/fonts/GT-Walsheim-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "GT Walsheim";
+  src: url("./assets/fonts/GT-Walsheim-Black.otf");
+  font-weight: 800;
+}
+
+.tooltip {
+  position: relative;
+  padding: 7px 10px 3px;
+  background: #333333;
+  font-size: 14px;
+  line-height: 20px;
+
+  z-index: 10000;
+  color: #ffffff;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 47%;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+
+    border-top: 6px solid #333333;
+  }
+}
+.tooltip-deletion {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  &:after {
+    top: 40%;
+    left: 100%;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+
+    border-left: 6px solid #333333;
+  }
+}
