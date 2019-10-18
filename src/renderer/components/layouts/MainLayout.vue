@@ -12,13 +12,13 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  height: 100%;
+  height: 100vh;
   box-sizing: border-box;
-  padding: 83px 20px 20px;
+  padding: 60px 0 0;
 }
 @media (max-width: 430px) {
   .container {
-    padding: 64px 8px 8px;
+    padding: 56px 0 0;
   }
 }
 </style>

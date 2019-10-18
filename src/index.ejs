@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./renderer/assets/css/normalize.css" />
     <title>Hrchat-native</title>
     <% if (htmlWebpackPlugin.options.nodeModules) { %>
     <!-- Add `node_modules/` to global paths so `require` works properly in development -->
@@ -10,6 +9,7 @@
       require('module').globalPaths.push('<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>')
     </script>
     <% } %>
+    <link rel="stylesheet" href="../static//normalize.css" />
   </head>
   <body>
     <div id="app"></div>

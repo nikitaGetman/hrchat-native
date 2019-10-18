@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+  height: 100%;
   box-sizing: border-box;
   padding: 15px 20px 80px;
   max-width: 910px;

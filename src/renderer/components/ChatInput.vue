@@ -89,15 +89,16 @@ export default {
       this.$store.dispatch(START_TRAINING)
     },
     copyRoomId() {
-      navigator.clipboard
-        .writeText(this.$store.state.user.room_id)
-        .then(() => {
-          console.log('copied')
-        })
-        .catch(err => {
-          console.warn('Can not copy room id!')
-          console.warn(err)
-        })
+      // navigator.clipboard
+      //   .writeText(this.$store.state.user.room_id)
+      //   .then(() => {
+      //     console.log('copied')
+      //   })
+      //   .catch(err => {
+      //     console.warn('Can not copy room id!')
+      //     console.warn(err)
+      //   })
+      this.$electron.clipboard.writeText('' + this.$store.state.user.room_id)
     },
     sendMessage() {
       if (

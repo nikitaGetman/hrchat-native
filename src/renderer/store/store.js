@@ -5,7 +5,7 @@ import router from '../router'
 import apiClient from '../services/service'
 import websocketClient from '../services/websocket'
 
-import { createPersistedState, createSharedMutations } from 'vuex-electron'
+// import { createPersistedState, createSharedMutations } from 'vuex-electron'
 
 import {
   LOGIN,
@@ -46,7 +46,7 @@ import {
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  plugins: [createPersistedState(), createSharedMutations()],
+  // plugins: [createPersistedState(), createSharedMutations()],
   strict: process.env.NODE_ENV !== 'production',
   state: {
     token: localStorage.getItem('user-token') || null,

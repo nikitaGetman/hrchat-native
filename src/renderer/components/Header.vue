@@ -54,7 +54,7 @@ export default {
   height: 60px;
 
   background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 
   font-size: 18px;
 
@@ -184,6 +184,7 @@ export default {
 
       .menu-logout-btn {
         display: block;
+        width: 100%;
         padding: 14px 16px;
         color: #eb5940;
         font-size: 14px;

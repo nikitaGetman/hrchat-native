@@ -24,11 +24,9 @@ export default {
 
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 430px) {
-  .container {
-    margin: 0 0;
-    height: 100vh;
-    width: 100vw;
-  }
+.container {
+  margin: 0 0;
+  height: 100vh;
+  width: 100vw;
 }
 </style>

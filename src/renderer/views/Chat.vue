@@ -184,7 +184,7 @@ export default {
 .chat-container {
   height: 100%;
   box-sizing: border-box;
-  margin-right: 20px;
+  // margin-right: 20px;
   padding: 20px 0;
 
   background-color: #ffffff;

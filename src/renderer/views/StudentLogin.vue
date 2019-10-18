@@ -75,8 +75,6 @@ export default {
       })
     },
     loginAsStudent() {
-      console.log('Logining')
-      console.log(this.$store)
       if (this.validateFields()) {
         this.$store
           .dispatch(LOGIN, {

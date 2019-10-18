@@ -131,6 +131,7 @@ export default {
 
 <style lang="scss" scoped>
 .content {
+  height: 100%;
   padding: 37px 20px;
   background-color: #fff;
 
