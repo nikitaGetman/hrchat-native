@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: "hrchat-native"
-};
+  name: 'hrchat-native'
+}
 </script>
 
 <style>

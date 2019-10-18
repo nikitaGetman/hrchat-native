@@ -33,24 +33,25 @@
 </template>
 
 <script>
-import SystemInformation from "./LandingPage/SystemInformation";
+import SystemInformation from './LandingPage/SystemInformation'
 
 export default {
-  name: "landing-page",
+  name: 'landing-page',
   components: { SystemInformation },
   methods: {
     open(link) {
-      this.$electron.shell.openExternal(link);
+      this.$electron.shell.openExternal(link)
     },
     increment() {
-      this.$store.dispatch("someAsyncTask");
+      console.log('seosmemmsems')
+      this.$store.dispatch('SOME_ACTION')
     }
   }
-};
+}
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 * {
   box-sizing: border-box;
@@ -59,7 +60,7 @@ export default {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #wrapper {
