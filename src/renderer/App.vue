@@ -5,11 +5,11 @@
 </template>
 
 <script>
-  export default {
-    name: 'hrchat-native'
-  }
+export default {
+  name: "hrchat-native"
+};
 </script>
 
 <style>
-  /* CSS */
+/* CSS */
 </style>
