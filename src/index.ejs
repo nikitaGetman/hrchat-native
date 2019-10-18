@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="./renderer/assets/css/normalize.css" />
     <title>Hrchat-native</title>
     <% if (htmlWebpackPlugin.options.nodeModules) { %>
     <!-- Add `node_modules/` to global paths so `require` works properly in development -->
@@ -16,10 +16,10 @@
     <!-- Set `__static` path to static files in production -->
     <% if (!process.browser) { %>
     <script>
-      if (process.env.NODE_ENV !== "development")
-        window.__static = require("path")
-          .join(__dirname, "/static")
-          .replace(/\\/g, "\\\\");
+      if (process.env.NODE_ENV !== 'development')
+        window.__static = require('path')
+          .join(__dirname, '/static')
+          .replace(/\\/g, '\\\\')
     </script>
     <% } %>
 

@@ -6,9 +6,7 @@
     <button class="back-btn" @click="goBack"></button>
     <div class="title">Войти в личный кабинет</div>
     <div :class="['error-container', { invisible: errors.length === 0 }]">
-      <div class="error-msg" v-for="(e, index) in errors" :key="index">
-        {{ e }}
-      </div>
+      <div class="error-msg" v-for="(e, index) in errors" :key="index">{{ e }}</div>
     </div>
 
     <!-- form for logining as Coach -->
@@ -51,7 +49,7 @@ export default {
   components: {
     LoginLayout
   },
-  data () {
+  data() {
     return {
       login: { value: '', error: false },
       password: { value: '', error: false },
@@ -60,17 +58,17 @@ export default {
     }
   },
   methods: {
-    validateFields () {
+    validateFields() {
       this.login.error = this.login.value === ''
       this.password.error = this.password.value === ''
 
       if (this.login.error || this.password.error) return false
       return true
     },
-    goBack () {
+    goBack() {
       this.$router.push('/')
     },
-    loginAsCoach () {
+    loginAsCoach() {
       if (this.validateFields()) {
         this.$store
           .dispatch(LOGIN, {
@@ -104,7 +102,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/css/login.scss";
+@import '../assets/css/login.scss';
 
 .title {
   margin-bottom: 0;

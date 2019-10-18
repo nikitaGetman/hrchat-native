@@ -21,11 +21,7 @@
         </div>
         <!-- start training button -->
         <div class="btn-container" v-tooltip.top="'Начать тренинг'">
-          <ve-button
-            tile
-            @click="startTraining"
-            :disabled="$store.state.room.is_active"
-          >
+          <ve-button tile @click="startTraining" :disabled="$store.state.room.is_active">
             <icon-start-training />
           </ve-button>
         </div>
@@ -37,11 +33,7 @@
         </div>
       </div>
 
-      <button
-        class="switch"
-        @click="showControl = !showControl"
-        :class="{ hide: showControl }"
-      ></button>
+      <button class="switch" @click="showControl = !showControl" :class="{ hide: showControl }"></button>
     </template>
 
     <!-- send button -->
@@ -82,7 +74,7 @@ export default {
     }
   },
   computed: {
-    disabled () {
+    disabled() {
       return (
         !this.$store.state.user.is_trainer &&
         !this.$store.state.is_input_enabled
@@ -90,13 +82,13 @@ export default {
     }
   },
   methods: {
-    stopTraining () {
+    stopTraining() {
       this.$store.dispatch(STOP_TRAINING)
     },
-    startTraining () {
+    startTraining() {
       this.$store.dispatch(START_TRAINING)
     },
-    copyRoomId () {
+    copyRoomId() {
       navigator.clipboard
         .writeText(this.$store.state.user.room_id)
         .then(() => {
@@ -107,7 +99,7 @@ export default {
           console.warn(err)
         })
     },
-    sendMessage () {
+    sendMessage() {
       if (
         this.$store.state.user.is_trainer &&
         this.$store.state.room.is_active
@@ -136,7 +128,7 @@ export default {
   }
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -191,7 +183,7 @@ export default {
   margin-right: 8px;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
 
     border-left: 4px solid transparent;

@@ -32,23 +32,23 @@ import { KICK_STUDENT } from '../store/const/actions'
 export default {
   name: 'students-list',
   computed: {
-    students () {
+    students() {
       return this.$store.state.userlist
     },
-    maxStudents () {
+    maxStudents() {
       return this.$store.state.room.count_students || 15
     },
-    isRoomFull () {
+    isRoomFull() {
       return this.maxStudents === this.students.length
     },
-    correctEnding () {
+    correctEnding() {
       if (this.maxStudents === 1) return 'участник'
       if (this.maxStudents < 5) return 'участника'
       return 'участников'
     }
   },
   methods: {
-    deleteStudent (student) {
+    deleteStudent(student) {
       this.$store.dispatch(KICK_STUDENT, student)
     }
   }
@@ -68,7 +68,7 @@ export default {
   line-height: 20px;
 
   &:hover .full:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -139,7 +139,7 @@ export default {
 
       &:before,
       &:after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
 

@@ -34,12 +34,12 @@ export default {
     }
   },
   computed: {
-    name () {
+    name() {
       return this.$store.state.user.username
     }
   },
   methods: {
-    logout () {
+    logout() {
       this.$store.dispatch(LOGOUT)
     }
   }
@@ -63,7 +63,7 @@ export default {
     height: 36px;
     margin-left: 15px;
 
-    background-image: url("../assets/logo.svg");
+    background-image: url('../assets/logo.svg');
     background-size: cover;
   }
   .username {
@@ -107,7 +107,7 @@ export default {
     .logo {
       width: 32px;
       height: 38px;
-      background-image: url("../assets/logo-small.svg");
+      background-image: url('../assets/logo-small.svg');
     }
     .username {
       text-align: left;
@@ -143,7 +143,7 @@ export default {
 
           &:after,
           &:before {
-            content: "";
+            content: '';
             position: absolute;
             display: block;
             width: 5px;

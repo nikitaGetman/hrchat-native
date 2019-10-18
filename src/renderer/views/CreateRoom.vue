@@ -4,9 +4,7 @@
       <form @submit.prevent="createRoom" class="form">
         <h2 class="title">Создать комнату</h2>
         <div class="error-container">
-          <p class="error" v-for="(error, index) in errors" :key="index">
-            {{ error }}
-          </p>
+          <p class="error" v-for="(error, index) in errors" :key="index">{{ error }}</p>
         </div>
 
         <div class="field required">
@@ -15,16 +13,12 @@
             class="checkbox"
             :class="{ active: is_championship }"
             @click="is_championship = true"
-          >
-            Чемпионат
-          </div>
+          >Чемпионат</div>
           <div
             class="checkbox"
             :class="{ active: !is_championship }"
             @click="is_championship = false"
-          >
-            На выбывание
-          </div>
+          >На выбывание</div>
         </div>
 
         <div class="field required">
@@ -67,11 +61,11 @@ export default {
       errors: []
     }
   },
-  created () {
+  created() {
     this.$store.dispatch(GET_ROOM_CREATION_PARAMS)
   },
   methods: {
-    validateFields () {
+    validateFields() {
       this.errors = []
       const params = this.$store.state.room_creation_params
 
@@ -111,7 +105,7 @@ export default {
 
       return this.errors.length === 0
     },
-    createRoom () {
+    createRoom() {
       if (this.validateFields()) {
         this.$store
           .dispatch(CREATE_ROOM, {
@@ -166,7 +160,7 @@ export default {
       font-size: 14px;
     }
     &.required .label:after {
-      content: "*";
+      content: '*';
       position: absolute;
       display: block;
       right: -12px;
@@ -193,13 +187,13 @@ export default {
       }
     }
 
-    input[type="number"] {
+    input[type='number'] {
       width: 34px;
       height: 45px;
       font-size: 14px;
       text-align: center;
     }
-    input[type="number"] {
+    input[type='number'] {
       -moz-appearance: textfield;
     }
     input::-webkit-outer-spin-button,

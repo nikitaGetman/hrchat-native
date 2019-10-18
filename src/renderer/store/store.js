@@ -171,6 +171,7 @@ export default new Vuex.Store({
   },
   actions: {
     [LOGIN]: ({ commit }, userCredentials) => {
+      console.log('DISPATCHED LOGIN')
       commit(AUTH_REQUEST)
 
       return apiClient

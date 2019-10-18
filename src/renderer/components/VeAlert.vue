@@ -4,12 +4,8 @@
       <h3 class="title">{{ title }}</h3>
       <p class="text">{{ text }}</p>
       <div class="control" :class="{ centered: !cancelable }">
-        <button class="cancel" @click="$emit('cancel')" v-if="cancelable">
-          {{ cancelBtnText }}
-        </button>
-        <button class="continue" @click="$emit('continue')">
-          {{ confirmBtnText }}
-        </button>
+        <button class="cancel" @click="$emit('cancel')" v-if="cancelable">{{ cancelBtnText }}</button>
+        <button class="continue" @click="$emit('continue')">{{ confirmBtnText }}</button>
       </div>
     </div>
   </div>

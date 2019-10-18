@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/css/login.scss";
+@import '../assets/css/login.scss';
 
 .btn-container {
   width: 280px;

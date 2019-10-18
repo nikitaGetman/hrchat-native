@@ -26,15 +26,15 @@ export default {
     isLocked: { type: Boolean, required: true }
   },
   computed: {
-    isMeAdmin () {
+    isMeAdmin() {
       return this.$store.state.user.is_trainer
     },
-    formatedText () {
+    formatedText() {
       return this.text.split('\n').join('<br/>')
     }
   },
   methods: {
-    changeState () {
+    changeState() {
       this.$emit('ticked')
     }
   }
@@ -71,7 +71,7 @@ export default {
 
     &.locked {
       height: 20px;
-      background-image: url("../assets/icons/lock.svg");
+      background-image: url('../assets/icons/lock.svg');
       background-repeat: no-repeat;
       background-position: center;
       .text {
@@ -110,7 +110,7 @@ export default {
 
     &.checked {
       border-color: #1390e5;
-      background-image: url("../assets/icons/check.svg");
+      background-image: url('../assets/icons/check.svg');
       background-repeat: no-repeat;
       background-position: center;
     }

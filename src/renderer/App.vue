@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import Loader from "./components/Loader.vue";
+import Loader from './components/Loader.vue'
 export default {
   components: {
     Loader
   }
-};
+}
 </script>
 
 <style lang="scss">
-@import "./assets/css/general.scss";
+@import './assets/css/general.scss';
 
 #app {
   position: absolute;
@@ -29,7 +29,7 @@ export default {
 
   background-color: #ededed;
   color: #1d1d1d;
-  font-family: "GT Walsheim";
+  font-family: 'GT Walsheim';
   font-weight: normal;
 }
 

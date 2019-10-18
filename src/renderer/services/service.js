@@ -44,7 +44,7 @@ apiClient.interceptors.request.use(
 )
 
 export default {
-  login (credentials) {
+  login(credentials) {
     const isTrainer = credentials.isTrainer
 
     if (isTrainer) {
@@ -62,15 +62,15 @@ export default {
     }
   },
 
-  restoreSession () {
+  restoreSession() {
     return apiClient.get('/api/user/')
   },
 
-  getRoomCreationParams () {
+  getRoomCreationParams() {
     return apiClient.get('/api/room/info/')
   },
 
-  createRoom (params) {
+  createRoom(params) {
     return apiClient.post('/api/room/', params)
   }
 }

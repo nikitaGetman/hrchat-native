@@ -5,9 +5,7 @@
         <span class="icon-back"></span>Вернуться на главную страницу
       </button>
       <h2 class="title">Тренинг окончен</h2>
-      <p class="text">
-        Для того чтобы скачать результаты тренинга, нажмите кнопку «Скачать»
-      </p>
+      <p class="text">Для того чтобы скачать результаты тренинга, нажмите кнопку «Скачать»</p>
       <button class="download-btn" @click="download">
         Скачать подробную информацию
         <span class="format">XLS</span>
@@ -25,10 +23,10 @@ export default {
     MainLayout
   },
   methods: {
-    toMain () {
+    toMain() {
       this.$router.push({ name: 'createRoom' })
     },
-    download () {
+    download() {
       console.log('Downloading file...')
     }
   }
@@ -66,7 +64,7 @@ export default {
       height: 7px;
       margin-right: 10px;
 
-      background-image: url("../assets/icons/arrowLeft_dark.svg");
+      background-image: url('../assets/icons/arrowLeft_dark.svg');
 
       background-size: cover;
     }
@@ -120,7 +118,7 @@ export default {
       top: 0;
       right: 0;
 
-      background-image: url("../assets/icons/download.svg");
+      background-image: url('../assets/icons/download.svg');
 
       background-size: cover;
       background-position: center;
@@ -147,10 +145,10 @@ export default {
         border-right: none;
         text-transform: lowercase;
         &:before {
-          content: "(.";
+          content: '(.';
         }
         &:after {
-          content: " )";
+          content: ' )';
         }
       }
 

@@ -6,9 +6,7 @@
     <button class="back-btn" @click="goBack"></button>
     <div class="title">Войти в чат</div>
     <div class="error-container" :class="{ invisible: errors.length === 0 }">
-      <div class="error-msg" v-for="(e, index) in errors" :key="index">
-        {{ e }}
-      </div>
+      <div class="error-msg" v-for="(e, index) in errors" :key="index">{{ e }}</div>
     </div>
 
     <!-- form for logining as Student -->
@@ -51,7 +49,7 @@ export default {
   components: {
     LoginLayout
   },
-  data () {
+  data() {
     return {
       name: { value: '', error: false },
       roomId: { value: '', error: false },
@@ -59,24 +57,26 @@ export default {
       errors: []
     }
   },
-  created () {
+  created() {
     this.roomId.value = this.$route.query.roomId || ''
   },
   methods: {
-    validateFields () {
+    validateFields() {
       this.name.error = this.name.value === ''
       this.roomId.error = this.roomId.value === ''
 
       if (this.name.error || this.roomId.error) return false
       return true
     },
-    goBack () {
+    goBack() {
       this.$router.push({
         path: '/',
         query: { roomId: this.$route.query.roomId }
       })
     },
-    loginAsStudent () {
+    loginAsStudent() {
+      console.log('Logining')
+      console.log(this.$store)
       if (this.validateFields()) {
         this.$store
           .dispatch(LOGIN, {
@@ -106,7 +106,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/css/login.scss";
+@import '../assets/css/login.scss';
 
 .title {
   margin-bottom: 0;

@@ -48,7 +48,7 @@ export default {
     line-height: 23px;
   }
   &.required .label:after {
-    content: "*";
+    content: '*';
     position: absolute;
     display: block;
     right: -12px;
@@ -104,11 +104,11 @@ export default {
 }
 
 .opened-eye {
-  background-image: url("../assets/icons/openedEye.svg");
+  background-image: url('../assets/icons/openedEye.svg');
   background-size: cover;
 }
 .closed-eye {
-  background-image: url("../assets/icons/closedEye.svg");
+  background-image: url('../assets/icons/closedEye.svg');
   background-size: cover;
 }
 </style>

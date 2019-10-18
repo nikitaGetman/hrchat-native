@@ -20,8 +20,7 @@
                 v-if="$store.state.is_admin_writing"
                 class="admin-writing"
                 :class="{ now: adminWriting }"
-                >Администратор печатает...</span
-              >
+              >Администратор печатает...</span>
             </div>
           </div>
           <div class="chat-control-container">
@@ -73,7 +72,7 @@ export default {
     }
   },
   computed: {
-    alertMessage () {
+    alertMessage() {
       const event = this.$store.state.chat_event
 
       const alertMessages = {
@@ -120,17 +119,19 @@ export default {
       }
 
       if (event) {
-        if (this.$store.state.user.is_trainer) { return alertMessages.trainer[event] }
+        if (this.$store.state.user.is_trainer) {
+          return alertMessages.trainer[event]
+        }
         return alertMessages.student[event]
       }
       return null
     },
-    messages () {
+    messages() {
       return this.$store.state.messages
     }
   },
   watch: {
-    messages () {
+    messages() {
       this.$nextTick().then(() => {
         const container = this.$refs.container
         container.scrollTop = container.scrollHeight
@@ -138,34 +139,34 @@ export default {
     }
   },
   methods: {
-    messageTicked (msg) {
+    messageTicked(msg) {
       if (!msg.checked) {
         this.$store.dispatch(MARK_ANSWER, msg.from)
         msg.checked = !msg.checked
       }
     },
-    denyReadiness () {
+    denyReadiness() {
       this.$store.dispatch(DENY_READINESS)
       this.logout()
     },
-    confirmReadiness () {
+    confirmReadiness() {
       this.$store.dispatch(CONFIRM_READINESS)
     },
-    logout () {
+    logout() {
       this.$store.dispatch(LOGOUT)
     },
-    stillInRoom () {
+    stillInRoom() {
       this.$store.commit(SET_EVENT, '')
     },
-    openTrainingFinishedView () {
+    openTrainingFinishedView() {
       this.$store.commit(RESET_ROOM_DATA)
       this.$router.push({ name: 'trainingFinished' })
     }
   },
-  created () {
+  created() {
     this.$store.dispatch(SOCKET_CONNECT)
   },
-  errorCaptured (err) {
+  errorCaptured(err) {
     if (err.toString() === 'TypeError: this.connection is null') {
       this.$store.commit(SET_EVENT, 'training_finished')
     }
